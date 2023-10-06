@@ -26,8 +26,8 @@ public class StudentService {
     }
 
     public Student updateStudent(Student student) {
-        Optional<Student> optionalStudent = studentRepository.findById(student.getId());
         Student oldStudent = null;
+        Optional<Student> optionalStudent = studentRepository.findById(student.getId());
         if (optionalStudent.isPresent()) {
             oldStudent = optionalStudent.get();
             oldStudent.setName(student.getName());
