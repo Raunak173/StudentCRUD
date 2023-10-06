@@ -40,7 +40,7 @@ public class StudentController {
         return studentService.updateStudent(student);
     }
 
-    @DeleteMapping("/deleteUser/{id}")
+    @DeleteMapping("/deleteStudent/{id}")
     public String deleteStudent(@PathVariable int id) {
         return studentService.deleteStudentById(id);
     }
